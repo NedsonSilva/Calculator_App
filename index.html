@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+	<title>Frontend Mentor | Calculator app</title>
+
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style>
+		.attribution {
+			font-size: 11px;
+			text-align: center;
+		}
+
+		.attribution a {
+			color: hsl(228, 45%, 44%);
+		}
+	</style>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<main>
+		<header>
+				<h1>calc</h1>
+
+				<div class="theme">
+					<p>Theme</p>
+					<!-- <p>
+						<span>1</span>
+						<span>2</span>
+						<span>3</span>
+					</p> -->
+					<span class="selected"></span>
+				</div>
+		</header>
+
+		<div id="result">
+			<p></p>
+		</div>
+
+		
+		<ol id="calculator">
+			<li class="list-btn">
+				<span onclick="calc.get('7')">7</span>
+				<span onclick="calc.get('8')">8</span>
+				<span onclick="calc.get('9')">9</span>
+				<button onclick="calc.delete()" id="del">DEL</button>
+			</li>
+
+			<li class="list-btn">
+				<span onclick="calc.get('4')">4</span>
+				<span onclick="calc.get('5')">5</span>
+				<span onclick="calc.get('6')">6</span>
+				<span onclick="calc.get('+')">+</span>
+			</li>
+
+			<li class="list-btn">
+				<span onclick="calc.get('1')">1</span>
+				<span onclick="calc.get('2')">2</span>
+				<span onclick="calc.get('3')">3</span>
+				<span onclick="calc.get('-')">-</span>
+			</li>
+
+			<li class="list-btn">
+				<span onclick="calc.get('.')">.</span>
+				<span onclick="calc.get('0')">0</span>
+				<span onclick="calc.get('/')">/</span>
+				<span onclick="calc.get('*')">x</span>
+			</li>
+
+			<li class="list-btn">
+				<button onclick="calc.reset()">RESET</button>
+				<button onclick="calc.calculation()">=</button>
+			</li>
+		</ol>
+	</main>
+
+
+
+	<footer class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		Coded by <a href="#">Your Name Here</a>.
+	</footer>
+
+	<script src="main.js"></script>
+</body>
+
+</html>
