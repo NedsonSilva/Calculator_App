@@ -5,7 +5,8 @@ const getOperation = document.querySelectorAll('.list-btn span')
 const calc = { 
    get() {
       result.classList.remove('error')
-      result.innerText += this.innerText.replace('*', 'x') 
+      result.innerText += this.innerText.replace('*', 'x')
+      console.log(result.innerText)
    },
    
    delete() {
@@ -29,7 +30,7 @@ const calc = {
             result.innerText = eval(expression)
          else
             result.innerText = eval(expression)
-               .toFixed(5).replace(/\./g, ',')
+               .toFixed(2).replace(/\./, ',')
       
       } catch (e) {
          result.classList.add('error')
