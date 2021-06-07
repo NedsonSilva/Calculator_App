@@ -19,6 +19,9 @@ const calc = {
    },
 
    calculation() {
+      if(result.innerText.search(/,/g) === 1)
+         result.innerText = result.innerText.replace(/,/g, '.')
+
       const expression = result.innerText.replace(/x/g, '*')
 
       try {
@@ -26,7 +29,7 @@ const calc = {
             result.innerText = eval(expression)
          else
             result.innerText = eval(expression)
-               .toFixed(8).replace('.', ',')
+               .toFixed(5).replace(/\./g, ',')
       
       } catch (e) {
          result.classList.add('error')
