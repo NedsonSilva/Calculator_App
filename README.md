@@ -16,7 +16,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://nedsonsilva.github.io/Calculator_App)
+- Live Site URL: [Add live site URL here](https://nedsonsilva.github.io/Calculator_App/)
 
 ### Built with
 
