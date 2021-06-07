@@ -31,8 +31,6 @@ const calc = {
       } catch (e) {
          result.classList.add('error')
       }
-
-      console.log(expression)
    }
 }
 
