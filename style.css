@@ -1,7 +1,9 @@
 :root {
-   --background: #3B4664;
+   --background: hsl(222, 26%, 31%);
    --btn-bg: #E9E4DB;
    --btn-color-number: #434A5A; 
+   --keypad-bg: hsl(223, 31%, 20%);
+   --text: hsl (221, 14%, 31%);
 }
 
 * {
@@ -13,6 +15,7 @@
 body {
    font-family: Arial, Helvetica, sans-serif;
    background: var(--background);
+   font-size: 32px;
 }
 
 main {
@@ -26,16 +29,17 @@ main {
 header {
    display: flex;
    justify-content: space-between;
-   align-items: center;
+   align-items: flex-end;
    width: 100%;
    margin: auto;
    color: #FEFFFF;
 }
 
-header h1 { font-size: 1.2rem; }
+header h1 { font-size: 1.5rem; }
 
 .theme {
    display: flex;
+   align-items: center;
    position: relative;
    text-transform: uppercase;
    font-size: .8rem;
@@ -45,12 +49,17 @@ header h1 { font-size: 1.2rem; }
    margin-right: 1rem;
 }
 
+.error {
+   color: rgb(214, 33, 33);
+}
+
 .selected {
    position: relative;
    width: 50px;
    height: 20px;
    background: rgba(15, 15, 15, 0.555);
    border-radius: 10px;
+   cursor: pointer;
 }
 
 .selected::after {
@@ -67,11 +76,11 @@ header h1 { font-size: 1.2rem; }
    content: '';
    display: block;
    position: absolute;
-   top: 2px;
+   top: 3px;
    left: 5px;
-   width: 15px;
-   height: 15px;
-   background: rgba(255, 0, 0, 0.849);
+   width: 14px;
+   height: 14px;
+   background: #D13E33;
    border-radius: 100%;
    transition: .3s;
 }
@@ -101,7 +110,7 @@ header h1 { font-size: 1.2rem; }
    width: 100%;
    padding: 1rem 10%;
    margin: auto;
-   background: #00000042;
+   background: var(--keypad-bg);
    border-radius: 7px;
 }
 
@@ -109,9 +118,6 @@ header h1 { font-size: 1.2rem; }
    display: flex;
    justify-content: space-between;
    width: 100%;
-}
-
-.list-btn {
    text-align: center;
    color: var(--btn-color-number);
    font-size: 1.5rem;
@@ -123,9 +129,9 @@ header h1 { font-size: 1.2rem; }
 .list-btn button {
    background: var(--btn-bg);
    flex-basis: 4.2rem;
-   padding: 4px 0;
-   margin: 5px 0;
-   border-bottom: 2px solid #B2A396;
+   padding: 6px 0;
+   margin: 4px 0;
+   border-bottom: 3px solid #B2A396;
    border-radius: 5px;
    cursor: pointer;
    font-weight: bold;
@@ -133,7 +139,8 @@ header h1 { font-size: 1.2rem; }
 
 .list-btn button {
    border: none;
-   border-bottom: 2px solid #424E73;
+   border-bottom: 3px solid #424E73;
+   font-size: .95rem;
 }
 
 #del {
@@ -142,14 +149,18 @@ header h1 { font-size: 1.2rem; }
 }
 
 .list-btn:last-child button {
-   flex-basis: 46%;
+   flex-basis: 48%;
    margin-bottom: 1rem;
-   padding: 14px 0;
-   background: #64729B;
+   padding: 12px 0;
    color: white;
 }
 
+.list-btn .reset {
+   background: #64729B;
+}
+
 .list-btn:last-child button:last-child {
-   background: rgb(223, 17, 17);
+   background: #D13F30;
    font-weight: bolder;
+   border-bottom-color: #93251A;
 }

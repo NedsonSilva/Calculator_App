@@ -1,0 +1,64 @@
+:root {
+   /* Backgrounds */
+   --main-background: hsl(268, 75%, 9%);
+   --keypad-background-3: hsl(268, 71%, 12%);
+   /* Keys */
+   --key-background: hsl(268, 47%, 21%);
+   --key-shadow: hsl(290, 70%, 36%);
+   /*keys Toggle */
+   --pure-cyan-background: hsl(176, 100%, 44%);
+   --soft-cyan-shadow: hsl(177, 92%, 70%);
+   /* Text */
+   --txt-light-yellow: hsl(52, 100%, 62%);
+   --txt-very-dark-blue: hsl(198, 20%, 13%);
+   --txt-white: hsl(0, 0, 100%)
+}
+
+.theme3 {
+   background: var(--main-background);
+}
+
+.theme3 header { color: var(--txt-light-yellow); }
+
+.theme3 .selected { background: var(--keypad-background-3); }
+
+
+.theme3 .selected::before { 
+   background: var(--pure-cyan-background); 
+}
+
+.theme3 #result {
+   background: var(--keypad-background-3);
+   color: var(--txt-light-yellow);
+}
+
+.theme3 #calculator {
+   background: var(--keypad-background-3);
+}
+
+.theme3 .list-btn { color: var(--txt-light-yellow); }
+
+.theme3 .list-btn span,
+.theme3 .list-btn button {
+   background: var(--key-background);
+   border-bottom: 3px solid var(--key-shadow);
+}
+
+.theme3 .list-btn button {
+   border-bottom: 3px solid var(--key-shadow);
+}
+
+.theme3 #del {
+   color: white;
+   background: hsl(281, 89%, 26%);
+}
+
+.theme3 .list-btn .reset {
+   background: hsl(281, 89%, 26%);
+}
+
+.theme3 .list-btn:last-child button:last-child {
+   background: var(--pure-cyan-background);
+   color: black;
+   border-bottom-color: var(--soft-cyan-shadow);
+}

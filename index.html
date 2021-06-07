@@ -21,6 +21,8 @@
 		}
 	</style>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/css/theme-2.css">
+	<link rel="stylesheet" href="assets/css/theme-3.css">
 </head>
 
 <body>
@@ -31,17 +33,12 @@
 
 				<div class="theme">
 					<p>Theme</p>
-					<!-- <p>
-						<span>1</span>
-						<span>2</span>
-						<span>3</span>
-					</p> -->
 					<span class="selected"></span>
 				</div>
 		</header>
 
 		<div id="result">
-			<p></p>
+			<p class="error"></p>
 		</div>
 
 		
@@ -75,7 +72,7 @@
 			</li>
 
 			<li class="list-btn">
-				<button onclick="calc.reset()">RESET</button>
+				<button onclick="calc.reset()" class="reset">RESET</button>
 				<button onclick="calc.calculation()">=</button>
 			</li>
 		</ol>

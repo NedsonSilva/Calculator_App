@@ -1,0 +1,46 @@
+:root {
+   --light-day: #E6E6E6;
+   --keypad-bg2: #D3CDCD;
+   --text2: #35352C;
+}
+
+.theme2 { background: var(--light-day); } 
+
+.theme2 header h1 { color: var(--text2); }
+
+.theme2 .theme p { color: var(--text2); }
+
+.theme2 .selected { background: var(--keypad-bg2); }
+
+.theme2 .selected::after { color: var(--text2); }
+
+.theme2 .selected::before { background: #CE5300; }
+
+.theme2 #result {
+   background: #EEEEEE;
+   color: var(--text2);
+}
+
+.theme2 #calculator { background: var(--keypad-bg2); }
+
+.theme2 .list-btn { color: var(--text2); }
+
+.theme2 .list-btn span,
+.theme2 .list-btn button {
+   background: var(--btn-bg);
+}
+
+.theme2 .list-btn button {
+   border-bottom: 2px solid #A79D94;
+}
+
+.theme2 #del {
+   color: white;
+   background: #3B8089;
+}
+
+.theme2 .list-btn .reset { background: #3B8089; }
+
+.theme2 .list-btn:last-child button:last-child {
+   background: #C85400
+}

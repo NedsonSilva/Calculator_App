@@ -2,7 +2,7 @@ const result = document.querySelector('#result p')
 
 const calc = { 
    get(number) {
-      result.style.color = 'rgba(255, 255, 255, 0.965)'
+      result.classList.remove('error')
       result.innerText += number.replace('*', 'x')    
    },
    
@@ -28,8 +28,7 @@ const calc = {
                .toFixed(5).replace('.', ',')
       
       } catch (e) {
-         result.style.color = 'rgb(238, 53, 53)'
-         result.innerText = 'invalid operation!'
+         result.classList.add('error')
       }
    }
 }
@@ -38,19 +37,17 @@ const calc = {
 const theme = document.querySelector('.selected')
 let cont = 2;
 function alter() {
-   // if(theme.classList.toggle('theme2'))  
-   //    theme.classList.toggle('theme3')
-   const main = document.querySelector('main')
+   
+   const body = document.body
 
-   if(cont < 4) {
-      if(cont === 2) 
-         main.classList.add('theme2')
-      else if(cont === 3) 
-         main.classList.replace('theme2', 'theme3')
-      else 
-         main.classList.remove('theme2', 'theme3')
-      cont++
-   }
+   if(cont === 2) 
+      body.classList.add('theme2')
+   else if(cont === 3) 
+      body.classList.replace('theme2', 'theme3')
+   else 
+      body.classList.remove('theme2', 'theme3')
+      
+   cont++
 
    if(cont > 3) cont = 1
 
