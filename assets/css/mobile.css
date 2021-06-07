@@ -10,7 +10,13 @@
 
    #result {
       height: 80px;
-      padding: 1.3rem 5%;
+      padding: 1.3rem 0;
+   }
+
+   #result div {
+      width: 90%;
+      margin: auto;
+      overflow-y: hidden;
    }
 
    #calculator { padding: 1rem 5%; }
