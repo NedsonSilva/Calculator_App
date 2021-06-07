@@ -15,11 +15,11 @@
 } 
 
 
-.theme2 .selected { background: var(--keypad-bg2); }
+.theme2 .alter-theme { background: var(--keypad-bg2); }
 
-.theme2 .selected::after { color: var(--text2); }
+.theme2 .alter-theme::after { color: var(--text2); }
 
-.theme2 .selected::before { background: #CE5300; }
+.theme2 .alter-theme::before { background: #CE5300; }
 
 .theme2 #result {
    background: #EEEEEE;

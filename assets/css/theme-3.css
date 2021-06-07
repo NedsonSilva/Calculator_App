@@ -20,9 +20,9 @@
 
 .theme3 .alter-theme { background: var(--key-background); }
 
-.theme3 .selected { background: var(--keypad-background-3); }
+.theme3 .alter-theme { background: var(--keypad-background-3); }
 
-.theme3 .selected::before { 
+.theme3 .alter-theme::before { 
    background: var(--pure-cyan-background); 
 }
 
