@@ -5,7 +5,7 @@ const getOperation = document.querySelectorAll('.list-btn span')
 const calc = { 
    get() {
       result.classList.remove('error')
-      result.innerText += this.innerText.replace('*', 'x')   
+      result.innerText += this.innerText.replace('*', 'x') 
    },
    
    delete() {
@@ -19,7 +19,7 @@ const calc = {
    },
 
    calculation() {
-      const expression = result.innerText.replace('x', '*')
+      const expression = result.innerText.replace(/x/g, '*')
 
       try {
          if(Number.isInteger(eval(expression)))
@@ -31,6 +31,8 @@ const calc = {
       } catch (e) {
          result.classList.add('error')
       }
+
+      console.log(expression)
    }
 }
 
