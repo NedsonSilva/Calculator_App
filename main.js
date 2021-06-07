@@ -1,13 +1,14 @@
 const result = document.querySelector('#result p')
+const getOperation = document.querySelectorAll('.list-btn span')
+
 
 const calc = { 
-   get(number) {
+   get() {
       result.classList.remove('error')
-      result.innerText += number.replace('*', 'x')    
+      result.innerText += this.innerText.replace('*', 'x')   
    },
    
    delete() {
-      const del = document.getElementById('del')
       const back = result.innerText
 
       result.innerText = back.substring(0, back.length - 1)
@@ -25,7 +26,7 @@ const calc = {
             result.innerText = eval(expression)
          else
             result.innerText = eval(expression)
-               .toFixed(5).replace('.', ',')
+               .toFixed(8).replace('.', ',')
       
       } catch (e) {
          result.classList.add('error')
@@ -33,9 +34,13 @@ const calc = {
    }
 }
 
-//ALTERAR TEMA
-const theme = document.querySelector('.selected')
+for(let operation of getOperation)
+   operation.addEventListener('click', calc.get)
+
+//Alter Theme
+const theme = document.querySelector('.alter-theme')
 let cont = 2;
+
 function alter() {
    
    const body = document.body
@@ -50,7 +55,6 @@ function alter() {
    cont++
 
    if(cont > 3) cont = 1
-
 }
 
 theme.addEventListener('click', alter)

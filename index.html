@@ -4,27 +4,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- displays site properly based on user's device -->
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-	<title>Frontend Mentor | Calculator app</title>
-
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-	<style>
-		.attribution {
-			font-size: 11px;
-			text-align: center;
-		}
-
-		.attribution a {
-			color: hsl(228, 45%, 44%);
-		}
-	</style>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/theme-2.css">
 	<link rel="stylesheet" href="assets/css/theme-3.css">
-</head>
+	<link rel="stylesheet" href="assets/css/mobile.css">
 
+	<title>Frontend Mentor | Calculator app</title>
+</head>
 <body>
 
 	<main>
@@ -33,7 +24,7 @@
 
 				<div class="theme">
 					<p>Theme</p>
-					<span class="selected"></span>
+					<span class="alter-theme"></span>
 				</div>
 		</header>
 
@@ -44,31 +35,31 @@
 		
 		<ol id="calculator">
 			<li class="list-btn">
-				<span onclick="calc.get('7')">7</span>
-				<span onclick="calc.get('8')">8</span>
-				<span onclick="calc.get('9')">9</span>
+				<span>7</span>
+				<span>8</span>
+				<span>9</span>
 				<button onclick="calc.delete()" id="del">DEL</button>
 			</li>
 
 			<li class="list-btn">
-				<span onclick="calc.get('4')">4</span>
-				<span onclick="calc.get('5')">5</span>
-				<span onclick="calc.get('6')">6</span>
-				<span onclick="calc.get('+')">+</span>
+				<span>4</span>
+				<span>5</span>
+				<span>6</span>
+				<span>+</span>
 			</li>
 
 			<li class="list-btn">
-				<span onclick="calc.get('1')">1</span>
-				<span onclick="calc.get('2')">2</span>
-				<span onclick="calc.get('3')">3</span>
-				<span onclick="calc.get('-')">-</span>
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>-</span>
 			</li>
 
 			<li class="list-btn">
-				<span onclick="calc.get('.')">.</span>
-				<span onclick="calc.get('0')">0</span>
-				<span onclick="calc.get('/')">/</span>
-				<span onclick="calc.get('*')">x</span>
+				<span>.</span>
+				<span>0</span>
+				<span>/</span>
+				<span>x</span>
 			</li>
 
 			<li class="list-btn">
@@ -78,14 +69,11 @@
 		</ol>
 	</main>
 
-
-
 	<footer class="attribution">
-		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-		Coded by <a href="#">Your Name Here</a>.
+		<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></p>
+		<p>Coded by <a href="#">Nedson Silva Alfaia</a></p>
 	</footer>
 
 	<script src="main.js"></script>
 </body>
-
 </html>

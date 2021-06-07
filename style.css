@@ -13,7 +13,7 @@
 }
 
 body {
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: 'Spartan', sans-serif;
    background: var(--background);
    font-size: 32px;
 }
@@ -22,7 +22,7 @@ main {
    display: flex;
    flex-direction: column;
    max-width: 380px;
-   margin: 3rem;
+   margin: 3rem auto;
    border-radius: 10px;
 }
 
@@ -45,15 +45,11 @@ header h1 { font-size: 1.5rem; }
    font-size: .8rem;
 }
 
-.theme p {
-   margin-right: 1rem;
-}
+.theme p { margin-right: 1rem; }
 
-.error {
-   color: rgb(214, 33, 33);
-}
+.error { color: rgb(214, 33, 33); }
 
-.selected {
+.alter-theme {
    position: relative;
    width: 50px;
    height: 20px;
@@ -62,7 +58,7 @@ header h1 { font-size: 1.5rem; }
    cursor: pointer;
 }
 
-.selected::after {
+.alter-theme::after {
    content: '1 2 3';
    display: block;
    position: absolute;
@@ -72,7 +68,7 @@ header h1 { font-size: 1.5rem; }
    letter-spacing: 3px;
 }
 
-.selected::before {
+.alter-theme::before {
    content: '';
    display: block;
    position: absolute;
@@ -85,10 +81,9 @@ header h1 { font-size: 1.5rem; }
    transition: .3s;
 }
 
-.theme2 .selected::before { left: 16px; }
+.theme2 .alter-theme::before { left: 16px; }
 
-.theme3 .selected::before { left: 30px; }
-
+.theme3 .alter-theme::before { left: 30px; }
 
 #result {
    width: 100%;
@@ -155,12 +150,23 @@ header h1 { font-size: 1.5rem; }
    color: white;
 }
 
-.list-btn .reset {
-   background: #64729B;
-}
+.list-btn .reset { background: #64729B; }
 
 .list-btn:last-child button:last-child {
    background: #D13F30;
    font-weight: bolder;
    border-bottom-color: #93251A;
 }
+
+.attribution {
+   font-size: 1rem;
+   text-align: center;
+}
+
+.attribution p {
+   margin-bottom: .7rem;
+   color: rgb(255, 255, 255);
+   font-weight: normal;
+}
+
+.attribution a { color: hsl(228, 7%, 87%); }

@@ -10,8 +10,6 @@
    --soft-cyan-shadow: hsl(177, 92%, 70%);
    /* Text */
    --txt-light-yellow: hsl(52, 100%, 62%);
-   --txt-very-dark-blue: hsl(198, 20%, 13%);
-   --txt-white: hsl(0, 0, 100%)
 }
 
 .theme3 {
@@ -20,8 +18,9 @@
 
 .theme3 header { color: var(--txt-light-yellow); }
 
-.theme3 .selected { background: var(--keypad-background-3); }
+.theme3 .alter-theme { background: var(--key-background); }
 
+.theme3 .selected { background: var(--keypad-background-3); }
 
 .theme3 .selected::before { 
    background: var(--pure-cyan-background); 
@@ -32,9 +31,7 @@
    color: var(--txt-light-yellow);
 }
 
-.theme3 #calculator {
-   background: var(--keypad-background-3);
-}
+.theme3 #calculator { background: var(--keypad-background-3); }
 
 .theme3 .list-btn { color: var(--txt-light-yellow); }
 
@@ -62,3 +59,11 @@
    color: black;
    border-bottom-color: var(--soft-cyan-shadow);
 }
+
+.theme3 .attribution p {
+   margin-bottom: .7rem;
+   color: var(--txt-light-yellow);
+   font-weight: normal;
+}
+
+.theme3 .attribution a { color: #e0e0e0; }

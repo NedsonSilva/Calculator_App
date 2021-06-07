@@ -10,6 +10,11 @@
 
 .theme2 .theme p { color: var(--text2); }
 
+.theme2 .alter-theme {
+   background: rgba(0, 0, 0, 0.26);
+} 
+
+
 .theme2 .selected { background: var(--keypad-bg2); }
 
 .theme2 .selected::after { color: var(--text2); }
@@ -44,3 +49,11 @@
 .theme2 .list-btn:last-child button:last-child {
    background: #C85400
 }
+
+.theme2 .attribution p {
+   margin-bottom: .7rem;
+   color: rgb(0, 0, 0);
+   font-weight: normal;
+}
+
+.theme2 .attribution a { color: #3B8089; }

@@ -1,0 +1,33 @@
+@media screen and (max-width: 375px) {
+   main { 
+      max-width: 90vw; 
+      margin: 1.5rem auto;
+   }
+   
+   header { margin-bottom: 1rem; }
+
+   header h1 { font-size: 2rem; }
+
+   #result {
+      height: 80px;
+      padding: 1.3rem 5%;
+   }
+
+   #calculator { padding: 1rem 5%; }
+
+   .list-btn span,
+   .list-btn button {
+      flex-basis: 3.8rem;
+      padding: 1rem 0;
+      font-size: 1.7rem;
+      border-bottom-width: 4px;
+   }
+
+   .list-btn button { font-size: 1.1rem; }
+
+   .list-btn:last-child button {
+      flex-basis: 47%;
+      margin-bottom: 0;
+      padding: 1.1rem 0;   
+   }
+}
