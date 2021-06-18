@@ -92,7 +92,6 @@ header h1 { font-size: 1.5rem; }
    padding: 2rem 0;
    background: rgba(0, 0, 0, 0.425);
    color: rgba(255, 255, 255, 0.965);
-   text-align: right;
    font-size: 2.2rem;
    font-weight: bold;
    line-height: 40px;
@@ -107,7 +106,7 @@ header h1 { font-size: 1.5rem; }
 
 #result div::-webkit-scrollbar {
    width: auto;
-   height: 2px;
+   height: 5px;
 }
 
 #result div::-webkit-scrollbar-track {
@@ -115,11 +114,14 @@ header h1 { font-size: 1.5rem; }
 }
 
 #result div::-webkit-scrollbar-thumb {
-   background-color: rgba(231, 231, 231, 0.123);    /* color of the scroll thumb */
-   border-radius: 10px;       /* roundness of the scroll thumb */
+   background-color: rgba(255, 255, 255, 0.239);
+   border-radius: 10px;
 }
 
-#result p:focus { outline: none; }
+#result p { 
+   width: max-content; 
+   margin-left: auto;
+}
 
 #calculator {
    display: flex;

@@ -1,22 +1,33 @@
 const result = document.querySelector('#result p')
 const getOperation = document.querySelectorAll('.list-btn span')
 
-
 const calc = { 
    get() {
+      const InvalidPointer = /[+\-x/](?=\.)/g
+
       result.classList.remove('error')
+
       result.innerText += this.innerText.replace('*', 'x')
-      console.log(result.innerText)
+
+      if(result.innerText.search(/\./) === 0)
+         result.innerText = result.innerText.replace('.', '0.')
+
+      result.innerText = result.innerText.replace(InvalidPointer, '$&0')
+      
+      calc.resizeFont()
    },
    
    delete() {
       const back = result.innerText
 
       result.innerText = back.substring(0, back.length - 1)
+
+      calc.resizeFont()
    },
 
    reset() {
       result.innerText = ''
+      calc.resizeFont()
    },
 
    calculation() {
@@ -29,12 +40,22 @@ const calc = {
          if(Number.isInteger(eval(expression)))
             result.innerText = eval(expression)
          else
-            result.innerText = eval(expression)
-               .toFixed(2).replace(/\./, ',')
-      
+            result.innerText = eval(expression).toFixed(2).replace(/\./, ',')
+   
       } catch (e) {
          result.classList.add('error')
+      } finally {
+         calc.resizeFont()
       }
+   },
+
+   resizeFont() {
+      const textLength = result.innerText.length
+
+      if(textLength > 12)
+         result.style.fontSize = '1.5rem'
+      else 
+         result.style.fontSize = '2.2rem'
    }
 }
 
@@ -54,7 +75,7 @@ function alter() {
    else if(cont === 3) 
       body.classList.replace('theme2', 'theme3')
    else 
-      body.classList.remove('theme2', 'theme3')
+      body.classList.remove('theme3')
       
    cont++
 
