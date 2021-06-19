@@ -3,31 +3,43 @@ const getOperation = document.querySelectorAll('.list-btn span')
 
 const calc = { 
    get() {
-      const InvalidPointer = /[+\-x/](?=\.)/g
-      const regex = /\d\.\d+(\.)/g
-      const regexPointer = /\.(?=\.)/g
-
       result.classList.remove('error')
       
       result.innerText += this.innerText.replace('*', 'x')
       
-      if(regex.test(result.innerText)) 
-         setTimeout(() => {
+      calc.formatExpression()
+
+      calc.resizeFont()
+   },
+   
+   formatExpression() {
+      const InvalidPointer = /[+\-x/](?=\.)/g
+      const regex = /\d\.\d+(\.)/g
+      const regexPointer = /\.(?=\.)/g
+      const operatorInvalid = /[+\-x/](?=\/)/g
+
+      function updateExpression() {
+         setTimeout(() => 
             result.innerText = result.innerText.substring(0, result.innerText.length - 1)
-         }, 100)
-      else if(regexPointer.test(result.innerText)) 
-         setTimeout(() => {
-            result.innerText = result.innerText.substring(0, result.innerText.length - 1)
-         }, 100)
+         , 100)
+      }
+
+      if(regex.test(result.innerText)) updateExpression()
+      
+      else if(regexPointer.test(result.innerText)) updateExpression()
+
+      if(result.innerText.includes('//')) updateExpression()
+
+      if(result.innerText.lastIndexOf('/') === 0) updateExpression()
+
+      if(operatorInvalid.test(result.innerText)) updateExpression()
 
       if(result.innerText.search(/\./) === 0)
          result.innerText = result.innerText.replace('.', '0.')
 
       result.innerText = result.innerText.replace(InvalidPointer, '$&0')
-
-      calc.resizeFont()
    },
-   
+
    delete() {
       const back = result.innerText
 
