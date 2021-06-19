@@ -16,7 +16,7 @@ const calc = {
       const InvalidPointer = /[+\-x/](?=\.)/g
       const regex = /\d\.\d+(\.)/g
       const regexPointer = /\.(?=\.)/g
-      const operatorInvalid = /[+\-x/](?=\/)/g
+      const operatorInvalid = /[+\-x/](?=\/|\+|-|x)/g
 
       function updateExpression() {
          setTimeout(() => 
