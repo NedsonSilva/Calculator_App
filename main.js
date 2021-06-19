@@ -11,8 +11,6 @@ const calc = {
       
       result.innerText += this.innerText.replace('*', 'x')
       
-      console.log(result.innerText)
-
       if(regex.test(result.innerText)) 
          setTimeout(() => {
             result.innerText = result.innerText.substring(0, result.innerText.length - 1)
