@@ -4,16 +4,29 @@ const getOperation = document.querySelectorAll('.list-btn span')
 const calc = { 
    get() {
       const InvalidPointer = /[+\-x/](?=\.)/g
+      const regex = /\d\.\d+(\.)/g
+      const regexPointer = /\.(?=\.)/g
 
       result.classList.remove('error')
-
+      
       result.innerText += this.innerText.replace('*', 'x')
+      
+      console.log(result.innerText)
+
+      if(regex.test(result.innerText)) 
+         setTimeout(() => {
+            result.innerText = result.innerText.substring(0, result.innerText.length - 1)
+         }, 100)
+      else if(regexPointer.test(result.innerText)) 
+         setTimeout(() => {
+            result.innerText = result.innerText.substring(0, result.innerText.length - 1)
+         }, 100)
 
       if(result.innerText.search(/\./) === 0)
          result.innerText = result.innerText.replace('.', '0.')
 
       result.innerText = result.innerText.replace(InvalidPointer, '$&0')
-      
+
       calc.resizeFont()
    },
    
