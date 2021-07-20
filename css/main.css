@@ -22,6 +22,7 @@ main {
    display: flex;
    flex-direction: column;
    max-width: 380px;
+   height: 80vh;
    margin: 3rem auto;
    border-radius: 10px;
 }
